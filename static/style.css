@@ -1,0 +1,64 @@
+#header ul {
+  list-style: none; /*������� ������� ������*/
+  margin: 0; /*������� �������*/
+  padding-left: 0; /*������� �������*/
+  margin-top:25px; /*������ ������ ������*/
+  background:#FF4444; /*��������� ��� ����� ���� (������� ���� ��������, �� ��������� ���� ����� ����)*/
+  height: 50px; /*������ ������*/
+}
+ #header  a {
+  text-decoration: none; /*������� ������������� ������ ������*/
+  background:#FF4444; /*��������� ��� � ������ ���� (������� ���� ��������, �� ��������� ���� ���� ������� ����)*/
+  color:#fff; /*������ ���� ������*/
+  padding:0px 15px; /*��������� ������*/
+  font-family: arial; /*������ �����*/
+  line-height:50px; /*������� ���� �� ���������*/
+  display: block; 
+  border-right: 1px solid #F36262; /*��������� ������ ������*/
+  -moz-transition: all 0.3s 0.01s ease; /*������ ������� �������*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+
+}
+#header  a:hover {
+  background:#D43737;/*��������� ������ ��� ���������*/
+}
+#header  li {
+  float:left; /*��������� ������ ������������� ��� ���������� ����*/
+}
+
+#footer{
+   background: rgba(0, 0, 0, 0.67);
+   color:rgba(255, 255, 255, 255);
+}
+#articles{
+    width: 1000px; /* Ширина слоя */
+    margin: 7px; /* Значение отступов */
+    border: 4px solid black; /* Параметры границы */
+    padding: 10px; /* Поля вокруг текста */
+}
+#articles a, a:visited
+{
+   text-decoration: none;/* Отменяем подчеркивание у ссылки */
+    color:  #000000; /* Цвет посещенной ссылки */
+}
+ a, a:visited
+{
+   text-decoration: none;/* Отменяем подчеркивание у ссылки */
+    color:  #000000; /* Цвет посещенной ссылки */
+}
+#pagination  div{
+     width: 10px; /* Ширина слоя */
+
+}
+
+ #pagination ul {
+  list-style: none; /*������� ������� ������*/
+}
+#pagination li {
+ float:left; /*��������� ������ ������������� ��� ���������� ����*/
+}
+#article {
+    overflow: hidden;
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
