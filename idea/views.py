@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+﻿from django.shortcuts import render, redirect
 from django.contrib import auth
 from idea.forms import IdeaForm
 # Create your views here.
@@ -6,41 +6,30 @@ from idea.models import IdeaUser
 
 
 def addIdea(request):
-<<<<<<< HEAD
+
     args = {}
-=======
-    args={}
->>>>>>> fc3e45350bbd6e02ca2d590c10e9ed7582265998
     args['username'] = auth.get_user(request).username
     args['form'] = IdeaForm()
     args['on'] = 0
     if request.POST:
         args['on'] = 1
-<<<<<<< HEAD
         sort_idea = request.POST.get('sort', '')
         if sort_idea == 'name':
             args['ideas'] = IdeaUser.objects.order_by("idea_name")
             args['ideas_sort'] = 1
-=======
         sort_idea=request.POST.get('sort','')
         if sort_idea=='name':
             args['ideas'] = IdeaUser.objects.order_by("idea_name")
             args['ideas_sort'] =1
->>>>>>> fc3e45350bbd6e02ca2d590c10e9ed7582265998
         else:
             args['ideas'] = IdeaUser.objects.order_by("idea_rank")
             args['ideas_sort'] = 2
-
-<<<<<<< HEAD
         filtr_idea = request.POST.get('ideafiltr', '')
-=======
         filtr_idea=request.POST.get('ideafiltr','')
->>>>>>> fc3e45350bbd6e02ca2d590c10e9ed7582265998
         try:
             args['ideas_filtr'] = IdeaUser.objects.filter(idea_rank=filtr_idea)
         except ValueError:
             args['ideas_filtr'] = IdeaUser.objects.filter(idea_rank=1)
-<<<<<<< HEAD
         form = IdeaForm(request.POST)
         if form.is_valid():
             add_to_db = form.save(commit=False)
@@ -59,7 +48,6 @@ def addIdea(request):
     else:
         return render(request, 'addidea.html', args)
     return render(request, 'addidea.html', args)
-=======
         form=IdeaForm(request.POST)
         if form.is_valid():
             add_to_db=form.save(commit=False)
@@ -74,4 +62,4 @@ def addIdea(request):
     else:
         return render(request, 'addidea.html',args)
     return render(request, 'addidea.html',args)
->>>>>>> fc3e45350bbd6e02ca2d590c10e9ed7582265998
+
