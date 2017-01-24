@@ -1,7 +1,7 @@
 ﻿from django.db import models
 
 from django.db.models import TextField , IntegerField , CharField
-=======
+
 from django.db.models import TextField, IntegerField,CharField
 
 # Create your models here.\
