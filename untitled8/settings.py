@@ -113,28 +113,40 @@ USE_L10N = True
 
 USE_TZ = True
 
+<<<<<<< HEAD
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 =======
+=======
+>>>>>>> c540d6acd3c2ae1b7937a4c8ab27ad70ac4830e2
 <<<<<<< HEAD
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> c540d6acd3c2ae1b7937a4c8ab27ad70ac4830e2
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> fc3e45350bbd6e02ca2d590c10e9ed7582265998
+>>>>>>> c540d6acd3c2ae1b7937a4c8ab27ad70ac4830e2
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+<<<<<<< HEAD
 
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -149,4 +161,12 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 
 
+=======
+<<<<<<< HEAD
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+=======
+
+>>>>>>> fc3e45350bbd6e02ca2d590c10e9ed7582265998
+>>>>>>> c540d6acd3c2ae1b7937a4c8ab27ad70ac4830e2
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
