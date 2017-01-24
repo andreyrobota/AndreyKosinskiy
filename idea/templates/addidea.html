@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block idea %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Название Идеи</p><br>
+        <input name="ideaname" type="text" size="50"><br>
+        <p>Текст Идеи</p><br>
+        <textarea name="ideatext" cols="40" rows="3"></textarea>
+        <p>Оценка Идеи</p><br>
+<<<<<<< HEAD
+        <input name="idearank" type="text" size="3"><br>
+=======
+        <input name="idearange" type="text" size="3"><br>
+>>>>>>> fc3e45350bbd6e02ca2d590c10e9ed7582265998
+        <p>Сортировка по:</p>
+        <input type="radio" name="sort" value="name">Имени<Br>
+        <input type="radio" name="sort" value="rank">Оценка<Br>
+        <p>Фильтр за оценкой:</p>
+        <input name="ideafiltr" type="text" size="3"><br>
+        <input type="submit" value="Добавить Идею примеенить фильтр и сортировку">
+    </form>
+    {% if on == 1 %}
+        <p><b>Название Идеи---->Оценка</b></p>
+        {% for idea in ideas %}
+            <p>{{ idea.idea_name }}---->{{ idea.idea_rank }}</p>
+        {% endfor %}
+        <br>
+        <p><b>Фильтр за оценкой {{ rank_filtr }}</b></p>
+        {% for idea in ideas_filtr %}
+            <p>{{ idea.idea_name }}---->{{ idea.idea_rank }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
