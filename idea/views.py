@@ -45,21 +45,6 @@ def addIdea(request):
         else:
             form = IdeaForm()
             print("Валідація полів не пройдена")
-    else:
-        return render(request, 'addidea.html', args)
     return render(request, 'addidea.html', args)
-        form=IdeaForm(request.POST)
-        if form.is_valid():
-            add_to_db=form.save(commit=False)
-            add_to_db.idea_name=request.POST.get('ideaname','')
-            add_to_db.idea_text =request.POST.get('ideatext','')
-            add_to_db.idea_rank =request.POST.get('idearank','')
-            #idea.idea_author = request.user
-            add_to_db.save()
-            return redirect('idea/')
-        else:
-            form = IdeaForm()
-    else:
-        return render(request, 'addidea.html',args)
-    return render(request, 'addidea.html',args)
+
 
